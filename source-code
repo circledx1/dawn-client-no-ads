@@ -1,0 +1,17 @@
+@echo off
+
+:: Set the path to the hosts.txt file
+set HOSTS_FILE=C:\Windows\System32\drivers\etc\hosts
+
+:: Open the hosts.txt file in append mode
+type nul > %HOSTS_FILE%
+
+:: Block the specified IPs
+:: Dawn (Feather).exe is not a valid IP, so we'll ignore it
+:: IP addresses should be separated by spaces, so let's split them into individual lines
+for %%i in (150.171.110.194 150.171.109.65 172.67.221.239 150.171.109.73 172.67.70.90 104.18.23.35 40.90.8.9 104.21.24.120) do (
+    echo 127.0.0.1 %%i >> %HOSTS_FILE%
+)
+
+pause
+echo Done blocking IPs.
