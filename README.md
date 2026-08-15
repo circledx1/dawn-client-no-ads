@@ -1,2 +1,2 @@
 # dawn-client-no-ads
-This project is closed. I won't discuss further details about it.
+This project will be opened soon, once I regain access to my another accounts,
